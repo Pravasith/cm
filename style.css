@@ -20,9 +20,10 @@ a {
     color: #333;
     text-decoration: none;
     font-size: 0.95rem;
+    transition-duration: 200ms;
 }
 
-nav a:hover {
+a:hover {
     color: var(--blue-color)
 }
 
