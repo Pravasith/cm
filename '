@@ -86,16 +86,7 @@ const hoverAnimations = () => {
     const underline = nav.querySelector('.inner-div')
     const container = nav.querySelector('.container')
 
-    container.childNodes.forEach(
-        (listItem, i) => {
-            listItem.addEventListener('click',
-                () => {
-                    listItem.firstChild.className = 'highlight-me'
-                    listItem
-                }
-            )
-        }
-    )
+    container.children.foreach(item => console.log(item))
 }
 
 
