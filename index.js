@@ -97,7 +97,7 @@ const styleSelectedItem = (selection, smallLine) => {
     }
 }
 
-const hoverAnimations = () => {
+const focusAnimations = () => {
     const smallLine = nav.querySelector('.small-line')
     const container = nav.querySelector('.container')
 
@@ -109,7 +109,6 @@ const hoverAnimations = () => {
         'resize', () => {
             if (state.previous) {
                 smallLine.style.transform = `translateX(${state.previous.offsetLeft - nav.offsetLeft}px)`
-                smallLine.style.width = state.previous.offsetWidth + 'px'
             }
         }
 
@@ -117,4 +116,4 @@ const hoverAnimations = () => {
 }
 
 
-hoverAnimations()
+focusAnimations()
