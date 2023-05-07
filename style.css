@@ -16,16 +16,15 @@ ul {
     padding: 0;
 }
 
+
 nav li {
     cursor: pointer;
 }
 
 a {
     /* TO TEST  */
-    pointer-events: none;
     color: var(--inactive-color);
-    text-decoration: none;
-    font-size: 0.95rem;
+    font-size: 0.65rem;
     transition-duration: 200ms;
 }
 
@@ -33,29 +32,60 @@ a:hover {
     color: var(--blue-color)
 }
 
-.container {
-    padding: 1rem 8rem;
-    display: flex;
-    justify-content: space-between;
-} 
-
-.outer-div, .inner-div {
-    width: 100%;
-    height: 0.2rem;
+a:active {
+    outline: var(--active-color);
 }
 
-.outer-div {
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+} 
+
+.big-line, .small-line {
+    height: 0.1rem;
+}
+
+.big-line {
     background-color: var(--inactive-color);
     position: relative;
 }
 
-.inner-div {
+.small-line {
     transition-duration: 400ms;
-    width: 25%;
+    width: 0%;
     background-color: var(--active-color);
     position: absolute;
 }
 
 .highlight-me {
     color: var(--active-color) 
+}
+
+@media only screen and (min-width: 768px) {
+    a {
+        font-size: 1.15rem;
+    }
+
+    nav {
+        margin: 1rem 3rem;
+    }
+
+    .container {
+        padding: 1rem;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    a {
+        font-size: 1.0rem;
+    }
+
+    nav {
+        margin: 3rem;
+    }
+
+    .container {
+        padding: 1rem 8rem;
+    }
 }

@@ -106,11 +106,12 @@ const hoverAnimations = () => {
     })
 
     window.addEventListener(
-        'resize', () => {
-            if (state.previous) {
-                smallLine.style.transform = `translateX(${state.previous.offsetLeft - nav.offsetLeft}px)`
-                smallLine.style.width = state.previous.offsetWidth + 'px'
-            }
+        'resize',
+        () => {
+            state.previous.className = 'highlight-me'
+
+            smallLine.style.transform = `translateX(${aTag.offsetLeft - nav.offsetLeft}px)`
+            smallLine.style.width = aTag.offsetWidth + 'px'
         }
 
     )
